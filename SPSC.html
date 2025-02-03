@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPSC</title>
+    <style>
+        /* Loader Styles */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #loader img {
+            width: 100px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Main Content Hidden Initially */
+        #content {
+            display: none;
+        }
+
+        /* Ensure html and body take up full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #717171;
+            color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            cursor: url('butterfly.ico'), default;
+        }
+
+        /* Flex container to center content vertically and horizontally */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #222222;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 10px auto;
+            max-width: 600px;
+        }
+
+        a {
+            color: #222222;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 30px;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        footer a {
+            font-size: 14px;
+            margin: 0;
+            display: inline;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <img src="SPSC.jpeg" alt="Loading...">
+    </div>
+
+    <!-- Main Content -->
+    <div id="content">
+        <header>
+            <img src="SPSC.jpeg" style="width:30vw;" alt="SPSC Logo">
+        </header>
+
+        <main>
+            <h1>Manifest Collective</h1>
+            <p>Groove with the adventures of life</p>
+
+            <br>
+            <a href="#">ABOUT </a>
+            <a href="#">ARTISTS</a>
+            <a href="#">EVENTS</a>
+            <a href="#">WATCH</a>
+            <a href="#">JOIN THE TEAM</a>
+            <a href="#">CONTACT US</a>
+            <br>
+            <p>BECOME A MEMBER. GET EARLY ACCESS TO NEW MUSIC, TICKETS AND ALL OTHER GOODS</p>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a href="#"><img src="https://firebasestorage.googleapis.com/v0/b/html-email-links.appspot.com/o/icons%2FBlack%20white%2Fblack-instagram-icon.png?alt=media&token=62d3b5b2-61d6-4733-bb27-a13027227cdd" style="width:30px;" alt="Instagram"></a>
+                <a href="#"><img src="https://firebasestorage.googleapis.com/v0/b/html-email-links.appspot.com/o/icons%2FBlack%20white%2Ffacebook-app-round-icon.png?alt=media&token=b103a164-9f5e-4886-893e-0d2e752732d4" style="width:30px;" alt="Facebook"></a>
+                <a href="#"><img src="https://firebasestorage.googleapis.com/v0/b/html-email-links.appspot.com/o/icons%2FBlack%20white%2Fsoundcloud-round-black-icon.png?alt=media&token=609c5cd9-c332-4332-b8d0-e10e3f8619ac" style="width:30px;" alt="Soundcloud"></a>
+                <a href="#"><img src="https://firebasestorage.googleapis.com/v0/b/html-email-links.appspot.com/o/icons%2FBlack%20white%2Ftiktok-square-icon.png?alt=media&token=91198531-8b49-4313-abd7-d82e15a9b52e" style="width:30px;" alt="Tiktok"></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            const content = document.getElementById('content');
+            loader.style.display = 'none';
+            content.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
